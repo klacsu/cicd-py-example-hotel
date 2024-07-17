@@ -24,7 +24,7 @@ class TestHootel(object):
     @allure.severity(allure.severity_level.TRIVIAL)
     @allure.tag("login")
     def test_login(self):
-        buci = self.browswr.find_element(By.XPATH, "//link[@type='image/x-icon']")
+        buci = self.browser.find_element(By.XPATH, "//link[@type='image/x-icon']")
         buci.click()
         login_btn = self.browser.find_element(By.XPATH, '//a[@class="nav-link"]')
         login_btn.click()
