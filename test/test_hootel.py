@@ -15,7 +15,8 @@ class TestHootel(object):
         self.browser = webdriver.Chrome(options=options)
         self.browser.get(URL)
         # self.browser.maximize_window()
-        self.browser.set_window_size(1024, 800)
+        # self.browser.set_window_size(1024, 800)
+        
     def teardown_method(self):
         self.browser.quit()
 
@@ -24,8 +25,8 @@ class TestHootel(object):
     @allure.severity(allure.severity_level.TRIVIAL)
     @allure.tag("login")
     def test_login(self):
-        # buci = self.browser.find_element(By.XPATH, "//link[@type='image/x-icon']")
-        # buci.click()
+        buci = self.browser.find_element(By.XPATH, "//span[@class='navbar-toggler-icon']")
+        buci.click()
         login_btn = self.browser.find_element(By.XPATH, '//a[@class="nav-link"]')
         login_btn.click()
 
